@@ -1,5 +1,5 @@
 # Лабораторная работа № 1
-
+[![Build Status](https://travis-ci.org/gnole/lab-01-parser.svg?branch=master)](https://travis-ci.org/gnole/lab-01-parser)
 ## Задание
 
 Реализовать утилиту табличного вывода массива данных, хранящихся в файле формата **JSON**.<br />
