@@ -1,20 +1,39 @@
+
+#include "../../.hunter/_Base/9a3594a/020aca2/48401e9/Install/include/nlohmann/json.hpp"
+#include "parser_printer.hpp"
+#include "student.hpp"
+#include <string>
+
+int main(int argc, char* argv[]) {
+  std::vector<ns::person> students;
+  const std::string fileName = "/home/oleg/CLionProjects/untitled6/file.json";
+  students = PARSER(fileName);
+  PRINTER(students);
+  return 0;
+
+
+//#ifndef DEBUG
+//    if (argc > 2)
+//    {
+//      std::cout << "Too many arguments" << std::endl;
+//      exit(0);
+//    }
+//    if (argc == 1)
+//    {
+//      std::cout << "You need to enter a name of file" << std::endl;
+//      exit(0);
+//    }
+//    std::string fileName(argv[1]);
+//#endif
 //
-// Created by oleg on 09.09.2020.
+//    std::vector<ns::person> students;
 //
-
-int main() {
-    //...
-    std::ifstream file{jsonPath};
-    if (!file) {
-        throw std::runtime_error{"unable to open json: " + jsonPath};
-    }
-
-    json data;
-    file >> data;
-
-    std::vector<Student> students;
-    for (auto const& student : data.at("items")) {
-        students.push_back(Student{student});
-    }
-    //...
+//#ifdef DEBUG
+//    const std::string fileName = "file.json";
+//#endif
+//
+//    students = PARSER(fileName);
+//    PRINTER(students);
+//
+//    return 0;
 }
