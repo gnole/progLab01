@@ -1,0 +1,2 @@
+/usr/bin/ar qc libparserd.a  CMakeFiles/parser.dir/sources/parser_printer.cpp.o
+/usr/bin/ranlib libparserd.a

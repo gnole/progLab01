@@ -1,0 +1,22 @@
+Start testing: Oct 09 11:38 UTC
+----------------------------------------------------------
+1/1 Testing: unit_tests
+1/1 Test: unit_tests
+Command: "/home/oleg/Документы/progLab/parser/_builds/tests"
+Directory: /home/oleg/Документы/progLab/parser/_builds
+"unit_tests" start time: Oct 09 11:38 UTC
+Output:
+----------------------------------------------------------
+Running main() from gtest_main.cc
+[0;32m[==========] [mRunning 0 tests from 0 test cases.
+[0;32m[==========] [m0 tests from 0 test cases ran. (0 ms total)
+[0;32m[  PASSED  ] [m0 tests.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"unit_tests" end time: Oct 09 11:38 UTC
+"unit_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 09 11:38 UTC

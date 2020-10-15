@@ -4,16 +4,21 @@
 
 #ifndef STUDENT_HPP_
 #define STUDENT_HPP_
-#include <iostream>
-#include "../../.hunter/_Base/9a3594a/020aca2/48401e9/Install/include/nlohmann/json.hpp"
-#include <any>
-namespace ns{
-  struct person {
-      std::string name;
-      std::any group;
-      double avg;
-      std::any debt;
-  };
-}
 
-#endif //STUDENT_HPP_
+#include <any>
+#include <iostream>
+//#include <nlohmann/json.hpp>
+
+#include "/root/.hunter/_Base/9a3594a/3181922/48401e9/Install/include/nlohmann/json.hpp"
+
+namespace ns {
+struct person {
+  std::string name;
+  std::any group;
+  double avg;
+  std::any debt;
+  bool operator==(const ns::person& lhs, const ns::person& rhs)
+};
+}  // namespace ns
+
+#endif  // STUDENT_HPP_

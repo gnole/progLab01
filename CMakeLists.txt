@@ -27,25 +27,31 @@ string(APPEND CMAKE_CXX_FLAGS " -Wshadow -Wnon-virtual-dtor")
 hunter_add_package(GTest)
 find_package(GTest CONFIG REQUIRED)
 
+hunter_add_package(nlohmann_json)
+find_package(nlohmann_json CONFIG REQUIRED)
+
 add_library(parser STATIC
-  # enum your files and delete this comment
+        # enum your files and delete this comment
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/parser_printer.cpp
-)
+        ${CMAKE_CURRENT_SOURCE_DIR}/sources/parser_printer.cpp
+        )
 add_executable(tests
-  # TODO: enum your files and delete this comment
-  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
-)
+        # TODO: enum your files and delete this comment
+        ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
+        )
 
 target_include_directories(parser
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 target_include_directories(tests
-  PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
-target_link_libraries(tests GTest::main parser)
+        PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
+        )
+target_link_libraries(tests GTest::main nlohmann_json::nlohmann_json parser)
+
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)
+
 
 if(BUILD_COVERAGE)
   set(ENABLE_COVERAGE ON CACHE BOOL "Enable coverage build." FORCE)

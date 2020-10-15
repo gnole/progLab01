@@ -1,0 +1,5 @@
+/home/oleg/Документы/progLab/parser/_builds/CMakeFiles/rebuild_cache.dir
+/home/oleg/Документы/progLab/parser/_builds/CMakeFiles/edit_cache.dir
+/home/oleg/Документы/progLab/parser/_builds/CMakeFiles/test.dir
+/home/oleg/Документы/progLab/parser/_builds/CMakeFiles/parser.dir
+/home/oleg/Документы/progLab/parser/_builds/CMakeFiles/tests.dir
