@@ -33,7 +33,7 @@ find_package(nlohmann_json CONFIG REQUIRED)
 add_library(parser STATIC
         # enum your files and delete this comment
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/parser_printer.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/parser_printer.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sources/student.cpp
         )
 add_executable(tests
         # TODO: enum your files and delete this comment

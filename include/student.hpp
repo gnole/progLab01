@@ -17,7 +17,7 @@ struct person {
   std::any group;
   double avg;
   std::any debt;
-  bool operator==(const ns::person& lhs, const ns::person& rhs)
+  friend bool operator==(const ns::person& lhs, const ns::person& rhs);
 };
 }  // namespace ns
 

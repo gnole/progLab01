@@ -42,6 +42,12 @@ any
 student.hpp
 /home/oleg/Документы/progLab/parser/sources/student.hpp
 
+/home/oleg/Документы/progLab/parser/sources/student.cpp
+student.hpp
+/home/oleg/Документы/progLab/parser/sources/student.hpp
+parser_printer.hpp
+/home/oleg/Документы/progLab/parser/sources/parser_printer.hpp
+
 /root/.hunter/_Base/9a3594a/3181922/48401e9/Install/include/nlohmann/json.hpp
 algorithm
 -

@@ -174,6 +174,33 @@ sources/parser_printer.cpp.s:
 	$(MAKE) -f CMakeFiles/parser.dir/build.make CMakeFiles/parser.dir/sources/parser_printer.cpp.s
 .PHONY : sources/parser_printer.cpp.s
 
+sources/student.o: sources/student.cpp.o
+
+.PHONY : sources/student.o
+
+# target to build an object file
+sources/student.cpp.o:
+	$(MAKE) -f CMakeFiles/parser.dir/build.make CMakeFiles/parser.dir/sources/student.cpp.o
+.PHONY : sources/student.cpp.o
+
+sources/student.i: sources/student.cpp.i
+
+.PHONY : sources/student.i
+
+# target to preprocess a source file
+sources/student.cpp.i:
+	$(MAKE) -f CMakeFiles/parser.dir/build.make CMakeFiles/parser.dir/sources/student.cpp.i
+.PHONY : sources/student.cpp.i
+
+sources/student.s: sources/student.cpp.s
+
+.PHONY : sources/student.s
+
+# target to generate assembly for a file
+sources/student.cpp.s:
+	$(MAKE) -f CMakeFiles/parser.dir/build.make CMakeFiles/parser.dir/sources/student.cpp.s
+.PHONY : sources/student.cpp.s
+
 tests/test.o: tests/test.cpp.o
 
 .PHONY : tests/test.o
@@ -215,6 +242,9 @@ help:
 	@echo "... sources/parser_printer.o"
 	@echo "... sources/parser_printer.i"
 	@echo "... sources/parser_printer.s"
+	@echo "... sources/student.o"
+	@echo "... sources/student.i"
+	@echo "... sources/student.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"

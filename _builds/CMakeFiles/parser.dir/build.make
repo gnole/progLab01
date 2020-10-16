@@ -81,17 +81,43 @@ CMakeFiles/parser.dir/sources/parser_printer.cpp.o.provides: CMakeFiles/parser.d
 CMakeFiles/parser.dir/sources/parser_printer.cpp.o.provides.build: CMakeFiles/parser.dir/sources/parser_printer.cpp.o
 
 
+CMakeFiles/parser.dir/sources/student.cpp.o: CMakeFiles/parser.dir/flags.make
+CMakeFiles/parser.dir/sources/student.cpp.o: ../sources/student.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oleg/Документы/progLab/parser/_builds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/parser.dir/sources/student.cpp.o"
+	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parser.dir/sources/student.cpp.o -c /home/oleg/Документы/progLab/parser/sources/student.cpp
+
+CMakeFiles/parser.dir/sources/student.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parser.dir/sources/student.cpp.i"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oleg/Документы/progLab/parser/sources/student.cpp > CMakeFiles/parser.dir/sources/student.cpp.i
+
+CMakeFiles/parser.dir/sources/student.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parser.dir/sources/student.cpp.s"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oleg/Документы/progLab/parser/sources/student.cpp -o CMakeFiles/parser.dir/sources/student.cpp.s
+
+CMakeFiles/parser.dir/sources/student.cpp.o.requires:
+
+.PHONY : CMakeFiles/parser.dir/sources/student.cpp.o.requires
+
+CMakeFiles/parser.dir/sources/student.cpp.o.provides: CMakeFiles/parser.dir/sources/student.cpp.o.requires
+	$(MAKE) -f CMakeFiles/parser.dir/build.make CMakeFiles/parser.dir/sources/student.cpp.o.provides.build
+.PHONY : CMakeFiles/parser.dir/sources/student.cpp.o.provides
+
+CMakeFiles/parser.dir/sources/student.cpp.o.provides.build: CMakeFiles/parser.dir/sources/student.cpp.o
+
+
 # Object files for target parser
 parser_OBJECTS = \
-"CMakeFiles/parser.dir/sources/parser_printer.cpp.o"
+"CMakeFiles/parser.dir/sources/parser_printer.cpp.o" \
+"CMakeFiles/parser.dir/sources/student.cpp.o"
 
 # External object files for target parser
 parser_EXTERNAL_OBJECTS =
 
 libparserd.a: CMakeFiles/parser.dir/sources/parser_printer.cpp.o
+libparserd.a: CMakeFiles/parser.dir/sources/student.cpp.o
 libparserd.a: CMakeFiles/parser.dir/build.make
 libparserd.a: CMakeFiles/parser.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oleg/Документы/progLab/parser/_builds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libparserd.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oleg/Документы/progLab/parser/_builds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libparserd.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/parser.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/parser.dir/link.txt --verbose=$(VERBOSE)
 
@@ -101,6 +127,7 @@ CMakeFiles/parser.dir/build: libparserd.a
 .PHONY : CMakeFiles/parser.dir/build
 
 CMakeFiles/parser.dir/requires: CMakeFiles/parser.dir/sources/parser_printer.cpp.o.requires
+CMakeFiles/parser.dir/requires: CMakeFiles/parser.dir/sources/student.cpp.o.requires
 
 .PHONY : CMakeFiles/parser.dir/requires
 

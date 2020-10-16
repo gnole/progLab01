@@ -15,27 +15,30 @@
 #include "student.hpp"
 
 bool equal(const std::any& lhs, const std::any& rhs) {
-  if (lhs.type() != rhs.type())
-    return false;
+  if (lhs.type() != rhs.type()) return false;
 
-  else if (lhs.type() == typeid(std::string))
+  if (lhs.type() == typeid(const char*))
+    return std::any_cast<const char*>(lhs) == std::any_cast<const char*>(rhs);
+
+  if (lhs.type() == typeid(std::string))
     return std::any_cast<std::string>(lhs) == std::any_cast<std::string>(rhs);
 
-  else if (lhs.type() == typeid(int))
+  if (lhs.type() == typeid(int))
     return std::any_cast<int>(lhs) == std::any_cast<int>(rhs);
 
-  else if (lhs.type() == typeid(float))
+  if (lhs.type() == typeid(double))
+    return std::any_cast<double>(lhs) == std::any_cast<double>(rhs);
+
+  if (lhs.type() == typeid(float))
     return std::any_cast<float>(lhs) == std::any_cast<float>(rhs);
 
-  else if (lhs.type() == typeid(bool))
-    return "null";
+  if (lhs.type() == typeid(bool)) return "null";
 
-  else if (lhs.type() == typeid(std::vector<std::string>))
+  if (lhs.type() == typeid(std::vector<std::string>))
     return std::any_cast<std::vector<std::string>>(lhs) ==
            std::any_cast<std::vector<std::string>>(rhs);
 
-  else
-    throw std::runtime_error("comparison of any unimplemented for type");
+  throw std::runtime_error("comparison of any unimplemented for type");
 }
 
 std::vector<ns::person> PARSER(const std::string& fileName) {

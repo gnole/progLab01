@@ -6,3 +6,8 @@ CMakeFiles/parser.dir/sources/parser_printer.cpp.o: ../include/student.hpp
 CMakeFiles/parser.dir/sources/parser_printer.cpp.o: ../sources/parser_printer.cpp
 CMakeFiles/parser.dir/sources/parser_printer.cpp.o: /root/.hunter/_Base/9a3594a/3181922/48401e9/Install/include/nlohmann/json.hpp
 
+CMakeFiles/parser.dir/sources/student.cpp.o: ../include/parser_printer.hpp
+CMakeFiles/parser.dir/sources/student.cpp.o: ../include/student.hpp
+CMakeFiles/parser.dir/sources/student.cpp.o: ../sources/student.cpp
+CMakeFiles/parser.dir/sources/student.cpp.o: /root/.hunter/_Base/9a3594a/3181922/48401e9/Install/include/nlohmann/json.hpp
+

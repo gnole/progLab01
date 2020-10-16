@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/parser.dir/sources/parser_printer.cpp.o"
+  "CMakeFiles/parser.dir/sources/student.cpp.o"
   "libparserd.pdb"
   "libparserd.a"
 )
