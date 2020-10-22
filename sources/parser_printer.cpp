@@ -41,7 +41,7 @@ bool equal(const std::any& lhs, const std::any& rhs) {
   throw std::runtime_error("comparison of any unimplemented for type");
 }
 
-std::vector<ns::person> PARSER(const std::string& fileName) {
+std::vector<person> PARSER(const std::string& fileName) {
   std::ifstream file(fileName);
   if (!file) {
     std::cout << "There is no such file with that name" << std::endl;
@@ -53,9 +53,9 @@ std::vector<ns::person> PARSER(const std::string& fileName) {
   json data;
   file >> data;
 
-  std::vector<ns::person> students;
+  std::vector<person> students;
   for (const auto& student : data.at("items")) {
-    ns::person currentStudent;
+    person currentStudent;
     // NAME
     currentStudent.name = student.at("name");
     // END_NAME
@@ -125,7 +125,7 @@ std::string print_any(const std::any& object) {
   return out_str;
 }
 
-void PRINTER(const std::vector<ns::person>& students) {
+void PRINTER(const std::vector<person>& students) {
   // FIRST STRING
   std::cout << '|';
   std::cout << std::setfill(' ') << " name" << std::setw(11);

@@ -1,22 +1,36 @@
-Start testing: Oct 09 11:38 UTC
+Start testing: Oct 22 10:10 UTC
 ----------------------------------------------------------
 1/1 Testing: unit_tests
 1/1 Test: unit_tests
 Command: "/home/oleg/Документы/progLab/parser/_builds/tests"
 Directory: /home/oleg/Документы/progLab/parser/_builds
-"unit_tests" start time: Oct 09 11:38 UTC
+"unit_tests" start time: Oct 22 10:10 UTC
 Output:
 ----------------------------------------------------------
 Running main() from gtest_main.cc
-[0;32m[==========] [mRunning 0 tests from 0 test cases.
-[0;32m[==========] [m0 tests from 0 test cases ran. (0 ms total)
+[0;32m[==========] [mRunning 1 test from 1 test case.
+[0;32m[----------] [mGlobal test environment set-up.
+[0;32m[----------] [m1 test from Parser
+[0;32m[ RUN      ] [mParser.PARSER
+There is no such file with that name
+unknown file: Failure
+C++ exception with description "file isn't exist" thrown in the test body.
+[0;31m[  FAILED  ] [mParser.PARSER (0 ms)
+[0;32m[----------] [m1 test from Parser (0 ms total)
+
+[0;32m[----------] [mGlobal test environment tear-down
+[0;32m[==========] [m1 test from 1 test case ran. (0 ms total)
 [0;32m[  PASSED  ] [m0 tests.
+[0;31m[  FAILED  ] [m1 test, listed below:
+[0;31m[  FAILED  ] [mParser.PARSER
+
+ 1 FAILED TEST
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
-Test Passed.
-"unit_tests" end time: Oct 09 11:38 UTC
+Test Failed.
+"unit_tests" end time: Oct 22 10:10 UTC
 "unit_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 09 11:38 UTC
+End testing: Oct 22 10:10 UTC

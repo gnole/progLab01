@@ -12,7 +12,7 @@
 #include "student.hpp"
 
 std::string print_any(const std::any &object);
-std::vector<ns::person> PARSER(const std::string &fileName);
-void PRINTER(const std::vector<ns::person> &students);
+std::vector<person> PARSER(const std::string &fileName);
+void PRINTER(const std::vector<person> &students);
 bool equal(const std::any &lhs, const std::any &rhs);
 #endif  // PARSER_PRINTER_HPP_

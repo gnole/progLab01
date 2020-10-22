@@ -11,14 +11,12 @@
 
 #include "/root/.hunter/_Base/9a3594a/3181922/48401e9/Install/include/nlohmann/json.hpp"
 
-namespace ns {
 struct person {
   std::string name;
   std::any group;
   double avg;
   std::any debt;
-  friend bool operator==(const ns::person& lhs, const ns::person& rhs);
+  friend bool operator==(const person& lhs, const person& rhs);
 };
-}  // namespace ns
 
 #endif  // STUDENT_HPP_
