@@ -1,10 +1,10 @@
-Start testing: Oct 22 10:10 UTC
+Start testing: Nov 05 22:45 UTC
 ----------------------------------------------------------
 1/1 Testing: unit_tests
 1/1 Test: unit_tests
 Command: "/home/oleg/Документы/progLab/parser/_builds/tests"
 Directory: /home/oleg/Документы/progLab/parser/_builds
-"unit_tests" start time: Oct 22 10:10 UTC
+"unit_tests" start time: Nov 05 22:45 UTC
 Output:
 ----------------------------------------------------------
 Running main() from gtest_main.cc
@@ -12,9 +12,12 @@ Running main() from gtest_main.cc
 [0;32m[----------] [mGlobal test environment set-up.
 [0;32m[----------] [m1 test from Parser
 [0;32m[ RUN      ] [mParser.PARSER
-There is no such file with that name
-unknown file: Failure
-C++ exception with description "file isn't exist" thrown in the test body.
+/home/oleg/Документы/progLab/parser/tests/test.cpp:58: Failure
+Expected equality of these values:
+  student_0
+    Which is: 72-byte object <D0-56 D6-2E FF-7F 00-00 0B-00 00-00 00-00 00-00 49-76 61-6E 6F-76 20-50 65-74 72-00 81-55 00-00 BC-A7 7F-D5 81-55 00-00 8E-23 85-D5 81-55 00-00 00-00 00-00 00-00 11-40 BC-A7 7F-D5 81-55 00-00 90-23 85-D5 81-55 00-00>
+  PARSER("file.json").at(0)
+    Which is: 72-byte object <80-53 67-D6 81-55 00-00 0B-00 00-00 00-00 00-00 49-76 61-6E 6F-76 20-50 65-74 72-00 00-00 00-00 D2-47 81-D5 81-55 00-00 F0-1C 67-D6 81-55 00-00 00-00 00-00 00-00 11-40 D2-47 81-D5 81-55 00-00 D0-4F 67-D6 81-55 00-00>
 [0;31m[  FAILED  ] [mParser.PARSER (0 ms)
 [0;32m[----------] [m1 test from Parser (0 ms total)
 
@@ -29,8 +32,8 @@ C++ exception with description "file isn't exist" thrown in the test body.
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Failed.
-"unit_tests" end time: Oct 22 10:10 UTC
+"unit_tests" end time: Nov 05 22:45 UTC
 "unit_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 22 10:10 UTC
+End testing: Nov 05 22:45 UTC

@@ -12,10 +12,11 @@ set(
 )
 
 include("tools/gate/cmake/HunterGate.cmake")
-
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/file.json
+        DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 HunterGate(
-  URL "https://github.com/cpp-pm/hunter/archive/v0.23.218.tar.gz"
-  SHA1 "9a3594a61227967fb92159339ba326701b287b19"
+        URL "https://github.com/cpp-pm/hunter/archive/v0.23.218.tar.gz"
+        SHA1 "9a3594a61227967fb92159339ba326701b287b19"
 )
 
 

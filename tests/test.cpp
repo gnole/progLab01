@@ -45,7 +45,7 @@ TEST(Parser, PARSER) {
 
   person student_1;
   student_1.name = "Sidorov Ivan";
-  student_1.group = "31";
+  student_1.group = "3";
   student_1.avg = 4;
   student_1.debt = "C++";
 
@@ -55,9 +55,9 @@ TEST(Parser, PARSER) {
   student_2.avg = 3.33;
   student_2.debt = std::vector<std::string>{"C++", "Linux", "Network"};
 
-  // ASSERT_EQ(student_0, PARSER("j.json").at(0));
-  ASSERT_EQ(student_1, PARSER("j").at(1));
-  // ASSERT_EQ(student_2, PARSER("tests/file.json").at(2));
+  ASSERT_EQ(student_0, PARSER("file.json").at(0));
+  ASSERT_EQ(student_1, PARSER("file.json").at(1));
+  ASSERT_EQ(student_2, PARSER("file.json").at(2));
 
   //  j = "{\n"
   //      "  \"items\": [\n"
