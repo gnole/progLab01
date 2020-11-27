@@ -241,6 +241,12 @@ parser_LIB_DEPENDS:STATIC=
 //Value Computed by CMake
 parser_SOURCE_DIR:STATIC=/home/oleg/Документы/progLab/parser
 
+//Dependencies for the target
+parser_printer_LIB_DEPENDS:STATIC=general;print_any;
+
+//Dependencies for target
+print_any_LIB_DEPENDS:STATIC=
+
 
 ########################
 # INTERNAL cache entries
