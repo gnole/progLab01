@@ -12,8 +12,7 @@ set(
 )
 
 include("tools/gate/cmake/HunterGate.cmake")
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/file.json
-        DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
 HunterGate(
         URL "https://github.com/cpp-pm/hunter/archive/v0.23.218.tar.gz"
         SHA1 "9a3594a61227967fb92159339ba326701b287b19"
@@ -25,41 +24,46 @@ string(APPEND CMAKE_CXX_FLAGS " -pedantic -Werror -Wall -Wextra")
 string(APPEND CMAKE_CXX_FLAGS " -Wno-unused-command-line-argument")
 string(APPEND CMAKE_CXX_FLAGS " -Wshadow -Wnon-virtual-dtor")
 
-hunter_add_package(GTest)
-find_package(GTest CONFIG REQUIRED)
-
+# hunter_add_package(GTest)
+add_subdirectory(third_party/gtest)
+# find_package(GTest CONFIG REQUIRED)
 hunter_add_package(nlohmann_json)
 find_package(nlohmann_json CONFIG REQUIRED)
 
-add_library(parser STATIC
-        # enum your files and delete this comment
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/parser_printer.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/student.cpp
-        )
+add_library(parser_printer STATIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/sources/parser_printer.cpp)
+target_include_directories(parser_printer PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_link_libraries(parser_printer PUBLIC nlohmann_json::nlohmann_json)
+
+add_library(print_any STATIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/sources/print_any.cpp)
+target_include_directories(print_any PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_link_libraries(parser_printer PUBLIC print_any)
+
 add_executable(tests
-        # TODO: enum your files and delete this comment
         ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
         )
+add_executable(main
+        ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp)
 
-target_include_directories(parser
-  PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
-target_include_directories(tests
-        PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
-        )
-target_link_libraries(tests GTest::main nlohmann_json::nlohmann_json parser)
+
+target_link_libraries(tests gtest_main parser_printer)
+
+
+target_link_libraries(main PUBLIC parser_printer)
 
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)
 
-
-if(BUILD_COVERAGE)
+if (BUILD_COVERAGE)
   set(ENABLE_COVERAGE ON CACHE BOOL "Enable coverage build." FORCE)
   list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
   find_package(codecov)
-  add_coverage(parser)
+
+  add_coverage(parser_printer)
   add_coverage(tests)
+  add_coverage(main)
   list(APPEND LCOV_REMOVE_PATTERNS "'${PROJECT_SOURCE_DIR}/tests/*'")
   coverage_evaluate()
 endif()

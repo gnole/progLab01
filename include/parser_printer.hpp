@@ -1,18 +1,16 @@
-//
-// Created by oleg on 02.10.2020.
-//
+// Copyright 2018 Your Name <your_email>
 
-#ifndef PARSER_PRINTER_HPP_
-#define PARSER_PRINTER_HPP_
+#ifndef INCLUDE_PARSER_PRINTER_HPP_
+#define INCLUDE_PARSER_PRINTER_HPP_
 
 #include <any>
 #include <iostream>
+#include <string>
 #include <vector>
 
-#include "student.hpp"
+#include "./include_student.h"
 
-std::string print_any(const std::any &object);
-std::vector<person> PARSER(const std::string &fileName);
-void PRINTER(const std::vector<person> &students);
-bool equal(const std::any &lhs, const std::any &rhs);
-#endif  // PARSER_PRINTER_HPP_
+std::vector<Student> parser(const std::string& fileName);
+std::ostream& printer(const std::vector<Student>& students, std::ostream& out);
+
+#endif  // INCLUDE_PARSER_PRINTER_HPP_
