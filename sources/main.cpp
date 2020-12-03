@@ -1,22 +1,24 @@
 // Copyright 2020 typeperfest
-#include <iostream>
-
 #include "parser_printer.hpp"
+#include <iostream>
 // int argc, char* argv[]
 
 #define DEBUG
 
-int main() {
+int main()
+{
 #ifndef DEBUG
-  if (argc > 2) {
+  if (argc > 2)
+  {
     std::cout << "Too many arguments" << std::endl;
     exit(0);
   }
-  if (argc == 1) {
+  if (argc == 1)
+  {
     std::cout << "You need to enter a name of file" << std::endl;
     exit(0);
   }
-  std::string fileName(argv[1]);
+    std::string fileName(argv[1]);
 #endif
 
   std::vector<Student> students;
@@ -25,10 +27,12 @@ int main() {
   const std::string fileName = "file.json";
 #endif
   try {
-    students = parser(fileName);
-  } catch (const std::exception& ex) {
-    std::cerr << ex.what();
-    return 1;
+      students = parser(fileName);
+  }
+  catch (const std::exception& ex)
+  {
+      std::cerr << ex.what();
+      return 1;
   }
   printer(students, std::cout);
   return 0;

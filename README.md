@@ -1,6 +1,5 @@
 # Лабораторная работа № 1
-[![Build Status](https://travis-ci.org/gnole/progLab01.svg?branch=master)](https://travis-ci.org/gnole/progLab01)
-[![Coverage Status](https://coveralls.io/repos/github/gnole/progLab01/badge.svg?branch=master)](https://coveralls.io/github/gnole/progLab01?branch=master)
+
 ## Задание
 
 Реализовать утилиту табличного вывода массива данных, хранящихся в файле формата **JSON**.<br />

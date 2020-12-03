@@ -14,8 +14,8 @@ set(
 include("tools/gate/cmake/HunterGate.cmake")
 
 HunterGate(
-        URL "https://github.com/cpp-pm/hunter/archive/v0.23.218.tar.gz"
-        SHA1 "9a3594a61227967fb92159339ba326701b287b19"
+  URL "https://github.com/cpp-pm/hunter/archive/v0.23.218.tar.gz"
+  SHA1 "9a3594a61227967fb92159339ba326701b287b19"
 )
 
 
@@ -24,9 +24,9 @@ string(APPEND CMAKE_CXX_FLAGS " -pedantic -Werror -Wall -Wextra")
 string(APPEND CMAKE_CXX_FLAGS " -Wno-unused-command-line-argument")
 string(APPEND CMAKE_CXX_FLAGS " -Wshadow -Wnon-virtual-dtor")
 
-hunter_add_package(GTest)
-#add_subdirectory(third_party/gtest)
-find_package(GTest CONFIG REQUIRED)
+# hunter_add_package(GTest)
+add_subdirectory(third_party/gtest)
+# find_package(GTest CONFIG REQUIRED)
 hunter_add_package(nlohmann_json)
 find_package(nlohmann_json CONFIG REQUIRED)
 
@@ -41,22 +41,23 @@ target_include_directories(print_any PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_link_libraries(parser_printer PUBLIC print_any)
 
 add_executable(tests
-        ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
-        )
+  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
+)
 add_executable(main
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp)
 
 
-target_link_libraries(tests GTest::gtest_main parser_printer)
+target_link_libraries(tests gtest_main parser_printer)
 
 
 target_link_libraries(main PUBLIC parser_printer)
 
 
+
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)
 
-if (BUILD_COVERAGE)
+if(BUILD_COVERAGE)
   set(ENABLE_COVERAGE ON CACHE BOOL "Enable coverage build." FORCE)
   list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
   find_package(codecov)

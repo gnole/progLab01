@@ -1,2 +1,0 @@
-/usr/bin/ar qc libprint_anyd.a  CMakeFiles/print_any.dir/sources/print_any.cpp.o
-/usr/bin/ranlib libprint_anyd.a

@@ -1,20 +1,22 @@
 // Copyright 2020 "typeperfest" <perfect2111@gmail.com>
 #include "parser_printer.hpp"
+#include "print_any.hpp"
 
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <vector>
+#include <typeinfo>
 #include <nlohmann/json.hpp>
 #include <string>
-#include <typeinfo>
-#include <vector>
 
-#include "print_any.hpp"
-
-std::vector<Student> parser(const std::string& fileName) {
+std::vector<Student> parser(const std::string& fileName)
+{
   std::ifstream file(fileName);
-  if (!file) {
-    std::cout << "There is no such file with that name" << std::endl;
+  if (!file)
+  {
+    std::cout << "There is no such file with that name"
+              << std::endl;
     throw std::runtime_error("file isn't exist");
   }
 
@@ -26,18 +28,19 @@ std::vector<Student> parser(const std::string& fileName) {
   std::vector<Student> students;
   for (const auto& student : data.at("items")) {
     Student currentStudent;
-    // NAME
+    //NAME
     currentStudent.Name = student.at("name");
-    // END_NAME
+    //END_NAME
 
-    // GROUP
-    if (student.at("group").is_string()) {
+    //GROUP
+    if (student.at("group").is_string())
+    {
       std::string for_cast = static_cast<std::string>(student.at("group"));
-      currentStudent.Group = for_cast;
+     currentStudent.Group = for_cast;
     } else if (student.at("group").is_number_integer()) {
       currentStudent.Group = static_cast<int>(student.at("group"));
     }
-    // END_GROUP
+    //END_GROUP
 
     // AVG
     if (student.at("avg").is_string()) {
@@ -51,7 +54,8 @@ std::vector<Student> parser(const std::string& fileName) {
     // END_AVG
 
     // DEBT
-    if (student.at("debt").is_string()) {
+    if (student.at("debt").is_string())
+    {
       std::string for_cast = static_cast<std::string>(student.at("debt"));
       currentStudent.Debt = for_cast;
     } else if (student.at("debt").is_array()) {
@@ -100,14 +104,17 @@ std::ostream& printer(const std::vector<Student>& students, std::ostream& out) {
   // LAST STRINGS
   for (const auto& student : students) {
     // TOP STRING
-    out << '|' << ' ' << std::setfill(' ') << std::left << std::setw(14)
-        << student.Name << '|' << ' ';
-    out << std::setfill(' ') << std::setw(7) << print_any(student.Group).str()
-        << '|' << ' ';
-    out << std::setfill(' ') << std::setw(5) << print_any(student.Avg).str()
-        << '|' << ' ';
-    out << std::setfill(' ') << std::setw(14) << print_any(student.Debt).str()
-        << '|';
+    out << '|' << ' ' << std::setfill(' ')
+              << std::left << std::setw(14)
+              << student.Name << '|' << ' ';
+    out << std::setfill(' ') << std::setw(7)
+              << print_any(student.Group).str()
+              << '|' << ' ';
+    out << std::setfill(' ') << std::setw(5)
+              << print_any(student.Avg).str() << '|' << ' ';
+    out << std::setfill(' ') << std::setw(14)
+              << print_any(student.Debt).str()
+              << '|';
     out << std::endl;
 
     // BOTTOM STRING
