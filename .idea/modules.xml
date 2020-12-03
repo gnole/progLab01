@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/ParserFinal.iml" filepath="$PROJECT_DIR$/.idea/ParserFinal.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/lab01-typeperfest-develop.iml" filepath="$PROJECT_DIR$/.idea/lab01-typeperfest-develop.iml" />
     </modules>
   </component>

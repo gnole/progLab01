@@ -1,12 +1,19 @@
-/home/oleg/Загрузки/firefox/clion-2020.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/oleg/CLionProjects/lab01-typeperfest-develop
-CMake Error at CMakeLists.txt:14 (include):
-  include could not find load file:
-
-    tools/gate/cmake/HunterGate.cmake
-
-
-CMake Error at CMakeLists.txt:16 (HunterGate):
-  Unknown CMake command "HunterGate".
-
-
--- Configuring incomplete, errors occurred!
+/home/oleg/Загрузки/firefox/clion-2020.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/oleg/CLionProjects/ParserFinal
+-- Found Python: /usr/bin/python3.8 (found version "3.8.6") found components: Interpreter 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- [hunter] Calculating Toolchain-SHA1
+-- [hunter] Calculating Config-SHA1
+-- [hunter] HUNTER_ROOT: /home/oleg/.hunter
+-- [hunter] [ Hunter-ID: 9a3594a | Toolchain-ID: 020aca2 | Config-ID: 48401e9 ]
+-- [hunter] NLOHMANN_JSON_ROOT: /home/oleg/.hunter/_Base/9a3594a/020aca2/48401e9/Install (ver.: 3.6.1)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/oleg/CLionProjects/ParserFinal/cmake-build-debug
