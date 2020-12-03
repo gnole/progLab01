@@ -16,7 +16,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/oleg/Документы/progLab/parser/_builds/CMakeFiles/parser.dir/DependInfo.cmake"
+  "/home/oleg/Документы/progLab/parser/_builds/CMakeFiles/parser_printer.dir/DependInfo.cmake"
+  "/home/oleg/Документы/progLab/parser/_builds/CMakeFiles/print_any.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

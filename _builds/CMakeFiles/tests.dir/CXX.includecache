@@ -6,22 +6,30 @@
 
 #IncludeRegexTransform: 
 
+../include/./include_student.h
+vector
+-
+iostream
+-
+any
+-
+
 ../include/parser_printer.hpp
 any
 -
 iostream
 -
+string
+-
 vector
 -
-student.hpp
-../include/student.hpp
+./include_student.h
+../include/./include_student.h
 
-../include/student.hpp
+../include/print_any.hpp
 any
 -
-iostream
--
-/root/.hunter/_Base/9a3594a/3181922/48401e9/Install/include/nlohmann/json.hpp
+string
 -
 
 /home/oleg/Документы/progLab/parser/tests/test.cpp
@@ -32,7 +40,9 @@ fstream
 nlohmann/json.hpp
 -
 parser_printer.hpp
-/home/oleg/Документы/progLab/parser/tests/parser_printer.hpp
+-
+print_any.hpp
+-
 
 /root/.hunter/_Base/9a3594a/3181922/48401e9/Install/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/print_any.hpp
+any
+-
+string
+-
+
+/home/oleg/Документы/progLab/parser/sources/print_any.cpp
+print_any.hpp
+-
+iomanip
+-
+vector
+-
+

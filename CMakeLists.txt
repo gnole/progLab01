@@ -24,9 +24,9 @@ string(APPEND CMAKE_CXX_FLAGS " -pedantic -Werror -Wall -Wextra")
 string(APPEND CMAKE_CXX_FLAGS " -Wno-unused-command-line-argument")
 string(APPEND CMAKE_CXX_FLAGS " -Wshadow -Wnon-virtual-dtor")
 
-# hunter_add_package(GTest)
-add_subdirectory(third_party/gtest)
-# find_package(GTest CONFIG REQUIRED)
+hunter_add_package(GTest)
+#add_subdirectory(third_party/gtest)
+find_package(GTest CONFIG REQUIRED)
 hunter_add_package(nlohmann_json)
 find_package(nlohmann_json CONFIG REQUIRED)
 
@@ -47,7 +47,7 @@ add_executable(main
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp)
 
 
-target_link_libraries(tests gtest_main parser_printer)
+target_link_libraries(tests GTest::gtest_main parser_printer)
 
 
 target_link_libraries(main PUBLIC parser_printer)
