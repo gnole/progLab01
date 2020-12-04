@@ -1,14 +1,4 @@
 /home/oleg/Загрузки/firefox/clion-2020.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/oleg/CLionProjects/ParserFinal
--- Found Python: /usr/bin/python3.8 (found version "3.8.6") found components: Interpreter 
--- Looking for pthread.h
--- Looking for pthread.h - found
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
--- Looking for pthread_create in pthreads
--- Looking for pthread_create in pthreads - not found
--- Looking for pthread_create in pthread
--- Looking for pthread_create in pthread - found
--- Found Threads: TRUE  
 -- [hunter] Calculating Toolchain-SHA1
 -- [hunter] Calculating Config-SHA1
 -- [hunter] HUNTER_ROOT: /home/oleg/.hunter
