@@ -3,7 +3,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/gnole/progLab01/badge.svg?branch=master)](https://coveralls.io/github/gnole/progLab01?branch=master)
 ## Задание
 
-
 Реализовать утилиту табличного вывода массива данных, хранящихся в файле формата **JSON**.<br />
 
 В качестве аргумента утилите передается путь в к файлу, который в ключе `items`<br />
