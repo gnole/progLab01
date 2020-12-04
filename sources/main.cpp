@@ -1,4 +1,4 @@
-// Copyright 2020 typeperfest
+// Copyright 2020
 #include "parser_printer.hpp"
 #include <iostream>
 // int argc, char* argv[]
