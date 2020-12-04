@@ -1,4 +1,4 @@
-// Copyright 2020 "typeperfest" <perfect2111@gmail.com>
+// Copyright 2020
 #include "parser_printer.hpp"
 #include "print_any.hpp"
 
